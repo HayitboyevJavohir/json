@@ -33,3 +33,9 @@ with open('bemor.json', 'w') as f:
 sonlar = json.loads(sonlar_json)
 bemor = json.loads(bemor_json)
 print(bemor) 
+
+filename = 'bemor.json'
+with open(filename) as f:
+    bemor = json.load(f)
+
+print(type(bemor))
