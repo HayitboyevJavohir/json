@@ -1,15 +1,15 @@
-# import json
+import json
 
-# x = 10
-# x_json = json.dumps(x)
+x = 10
+x_json = json.dumps(x)
 
-# ism = "anvar"
-# ism_json = json.dumps(ism)
+ism = "anvar"
+ism_json = json.dumps(ism)
 
-# sonlar = [12, 45, 23, 67]
-# sonlar_json = json.dumps(sonlar)
+sonlar = [12, 45, 23, 67]
+sonlar_json = json.dumps(sonlar)
 
-# print(type(sonlar_json))
+print(type(sonlar_json))
 
 bemor = {
     "ism": "Alijon Valiyev",
@@ -23,6 +23,13 @@ bemor = {
     ]
 }
 
-bemor_json = json.dusomps(bemor)
+bemor_json = json.dumps(bemor, indent=4)
 
 print(bemor_json)
+
+with open('bemor.json', 'w') as f:
+    json.dump(bemor,f)
+
+sonlar = json.loads(sonlar_json)
+bemor = json.loads(bemor_json)
+print(bemor) 
