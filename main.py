@@ -27,8 +27,13 @@ bemor_json = json.dumps(bemor, indent=4)
 
 print(bemor_json)
 
+# with open('bemor.json', 'w') as f:
+#     json.dump(bemor,f)
+
 with open('bemor.json', 'w') as f:
-    json.dump(bemor,f)
+    bemor = json.load(f)
+    print(bemor)
+    print(type)
 
 sonlar = json.loads(sonlar_json)
 bemor = json.loads(bemor_json)
